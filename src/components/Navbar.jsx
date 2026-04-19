@@ -92,7 +92,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div style={{
+        <div className="mobile-menu" style={{
           position: 'fixed', top: 70, left: 0, right: 0, zIndex: 99,
           background: 'rgba(10,10,15,0.97)', borderBottom: '1px solid rgba(240,237,232,0.08)',
           padding: '24px 24px 32px', display: 'flex', flexDirection: 'column', gap: 20,

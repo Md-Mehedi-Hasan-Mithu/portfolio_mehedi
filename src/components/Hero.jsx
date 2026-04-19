@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { data } from '../data';
-import heroImage from '../assets/FB_IMG_1749873261583-removebg-preview.png';
 
 const ROLES = [
   "Software Engineer",

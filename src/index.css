@@ -53,6 +53,8 @@ button, a { transition: background 0.2s, color 0.2s, transform 0.2s, border-colo
 .hamburger { display: none; background: none; border: none; color: #f0ede8; font-size: 24px; padding: 4px; }
 .hero-grid { width: 100%; }
 .project-card { width: 100%; }
+.mobile-menu { animation: slideDown 0.24s ease forwards; }
+.mobile-menu button { transition: transform 0.2s, color 0.2s, border-color 0.2s; }
 
 @media (max-width: 1024px) {
   body { padding-inline: 20px; }
@@ -75,6 +77,17 @@ button, a { transition: background 0.2s, color 0.2s, transform 0.2s, border-colo
   .hero-copy h1 { font-size: clamp(38px, 12vw, 56px); }
   .project-card { gap: 16px !important; }
   .section-grid { gap: 24px !important; }
+}
+
+@media (max-width: 520px) {
+  body { padding-inline: 14px; }
+  nav { padding: 12px 16px !important; }
+  section { padding: 48px 16px !important; }
+  .hero-grid { gap: 20px; }
+  .hero-copy h1 { font-size: clamp(32px, 14vw, 48px); }
+  .hero-copy p { font-size: 13px; }
+  .project-card { gap: 14px !important; }
+  footer { padding: 18px 16px !important; }
 }
 
 @media (pointer: coarse) {
@@ -105,6 +118,10 @@ button, a { transition: background 0.2s, color 0.2s, transform 0.2s, border-colo
 @keyframes slideIn {
   from { transform: translateX(-20px); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .fade-up { animation: fadeUp 0.7s ease forwards; }
