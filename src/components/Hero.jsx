@@ -99,20 +99,23 @@ export default function Hero() {
             </p>
 
             {/* CTAs */}
-            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', animation: 'fadeUp 0.7s 0.65s ease both' }}>
+            <div className="hero-actions" style={{ display: 'flex', gap: 16, flexWrap: 'wrap', animation: 'fadeUp 0.7s 0.65s ease both' }}>
               <a href="#projects"
+                className="hero-cta"
                 style={{ padding: '14px 32px', background: '#e8c547', color: '#0a0a0f', fontWeight: 700, fontSize: 13, letterSpacing: '0.08em', textTransform: 'uppercase', borderRadius: 2, transition: 'all 0.2s' }}
                 onMouseEnter={e => { e.target.style.background = '#c4a832'; e.target.style.transform = 'translateY(-2px)'; }}
                 onMouseLeave={e => { e.target.style.background = '#e8c547'; e.target.style.transform = 'translateY(0)'; }}>
                 View My Work
               </a>
               <a href={`mailto:${data.email}`}
+                className="hero-cta secondary"
                 style={{ padding: '14px 32px', background: 'transparent', color: '#f0ede8', fontWeight: 600, fontSize: 13, letterSpacing: '0.08em', textTransform: 'uppercase', border: '1px solid rgba(240,237,232,0.14)', borderRadius: 2, transition: 'all 0.2s' }}
                 onMouseEnter={e => { e.target.style.borderColor = '#e8c547'; e.target.style.color = '#e8c547'; e.target.style.transform = 'translateY(-2px)'; }}
                 onMouseLeave={e => { e.target.style.borderColor = 'rgba(240,237,232,0.14)'; e.target.style.color = '#f0ede8'; e.target.style.transform = 'translateY(0)'; }}>
                 Get In Touch
               </a>
               <a href="/resume.pdf" download
+                className="hero-cta tertiary"
                 style={{ padding: '14px 32px', background: 'transparent', color: '#4ecdc4', fontWeight: 600, fontSize: 13, letterSpacing: '0.08em', textTransform: 'uppercase', border: '1px solid rgba(78,205,196,0.25)', borderRadius: 2, transition: 'all 0.2s' }}
                 onMouseEnter={e => { e.target.style.background = 'rgba(78,205,196,0.08)'; e.target.style.transform = 'translateY(-2px)'; }}
                 onMouseLeave={e => { e.target.style.background = 'transparent'; e.target.style.transform = 'translateY(0)'; }}>
@@ -121,7 +124,7 @@ export default function Hero() {
             </div>
 
             {/* Stats */}
-            <div style={{ display: 'flex', gap: 48, marginTop: 64, animation: 'fadeUp 0.7s 0.8s ease both', flexWrap: 'wrap' }}>
+            <div className="hero-stats" style={{ display: 'flex', gap: 48, marginTop: 64, animation: 'fadeUp 0.7s 0.8s ease both', flexWrap: 'wrap' }}>
               {data.stats.map((s, i) => (
                 <div key={i}>
                   <div style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 800, color: '#e8c547', lineHeight: 1 }}>{s.num}</div>
@@ -161,6 +164,12 @@ export default function Hero() {
           }
         }
       `}</style>
+
+      {/* Mobile sticky CTA */}
+      <div className="hero-mobile-bar" style={{ display: 'none' }}>
+        <a href="#projects" className="hero-mobile-button">View Work</a>
+        <a href={`mailto:${data.email}`} className="hero-mobile-button secondary">Hire Me</a>
+      </div>
 
       {/* Scroll indicator */}
       <div style={{ position: 'absolute', bottom: 32, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>

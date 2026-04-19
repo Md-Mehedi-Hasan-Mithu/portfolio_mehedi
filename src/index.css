@@ -53,6 +53,13 @@ button, a { transition: background 0.2s, color 0.2s, transform 0.2s, border-colo
 .hamburger { display: none; background: none; border: none; color: #f0ede8; font-size: 24px; padding: 4px; }
 .hero-grid { width: 100%; }
 .project-card { width: 100%; }
+.hero-actions { width: 100%; justify-content: flex-start; }
+.hero-actions .hero-cta { min-width: 120px; }
+.hero-stats { flex-wrap: wrap; gap: 24px; }
+.hero-mobile-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 50; background: rgba(10, 10, 15, 0.98); border-top: 1px solid rgba(240,237,232,0.08); padding: 16px 20px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; backdrop-filter: blur(10px); }
+.hero-mobile-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 18px; border-radius: 4px; font-family: 'Syne', sans-serif; font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; text-decoration: none; }
+.hero-mobile-button.secondary { background: transparent; color: #f0ede8; border: 1px solid rgba(240,237,232,0.14); }
+.hero-mobile-button:not(.secondary) { background: #e8c547; color: #0a0a0f; }
 .mobile-menu { animation: slideDown 0.24s ease forwards; }
 .mobile-menu button { transition: transform 0.2s, color 0.2s, border-color 0.2s; }
 
@@ -75,6 +82,11 @@ button, a { transition: background 0.2s, color 0.2s, transform 0.2s, border-colo
   body { padding-inline: 16px; }
   .hero-grid { gap: 24px; }
   .hero-copy h1 { font-size: clamp(38px, 12vw, 56px); }
+  .hero-copy p { max-width: 100%; }
+  .hero-actions { gap: 12px; }
+  .hero-actions .hero-cta { width: 100%; justify-content: center; }
+  .hero-stats { flex-direction: column; gap: 16px; }
+  .hero-mobile-bar { display: flex; }
   .project-card { gap: 16px !important; }
   .section-grid { gap: 24px !important; }
 }
