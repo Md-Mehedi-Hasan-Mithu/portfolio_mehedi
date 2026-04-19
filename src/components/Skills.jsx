@@ -52,7 +52,6 @@ export default function Skills() {
             <div key={group.category} style={{
               background: '#12121a', padding: '28px 24px',
               border: '1px solid rgba(240,237,232,0.08)',
-              transition: 'border-color 0.2s, background 0.2s',
               opacity: visible ? 1 : 0,
               transform: visible ? 'translateY(0)' : 'translateY(20px)',
               transition: `opacity 0.5s ${i * 0.07}s ease, transform 0.5s ${i * 0.07}s ease, border-color 0.2s, background 0.2s`,
