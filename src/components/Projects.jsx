@@ -98,7 +98,7 @@ export default function Projects() {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           {data.projects.map((project, i) => (
-            <div key={i}
+            <div key={i} className="project-card"
               onClick={() => setSelected(project)}
               style={{
                 background: '#0a0a0f', border: '1px solid rgba(240,237,232,0.08)',

@@ -30,8 +30,8 @@ const s = {
     border: 'none',
   },
   hamburger: (open) => ({
-    display: 'none', background: 'none', border: 'none',
-    color: '#f0ede8', fontSize: 22, cursor: 'none', padding: 4,
+    background: 'none', border: 'none',
+    color: '#f0ede8', fontSize: 22, padding: 4,
   }),
 };
 
@@ -66,7 +66,7 @@ export default function Navbar() {
         <a href="#home" style={s.logo}>&lt;MH/&gt;</a>
 
         {/* Desktop links */}
-        <ul style={{ ...s.links, '@media(max-width:768px)': { display: 'none' } }} className="nav-desktop">
+        <ul style={s.links} className="nav-desktop">
           {NAV_ITEMS.map(id => (
             <li key={id}>
               <button onClick={() => scrollTo(id)}
@@ -84,8 +84,7 @@ export default function Navbar() {
             Hire Me
           </a>
           {/* Hamburger for mobile */}
-          <button className="hamburger" onClick={() => setMobileOpen(o => !o)}
-            style={{ background: 'none', border: 'none', color: '#f0ede8', fontSize: 24, display: 'none' }}>
+          <button className="hamburger" onClick={() => setMobileOpen(o => !o)}>
             {mobileOpen ? '✕' : '☰'}
           </button>
         </div>

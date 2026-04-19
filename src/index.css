@@ -45,6 +45,42 @@ button { cursor: none; }
 /* Selection */
 ::selection { background: var(--accent); color: var(--bg); }
 
+html, body, #root { min-height: 100%; }
+img { max-width: 100%; height: auto; display: block; }
+button, a { transition: background 0.2s, color 0.2s, transform 0.2s, border-color 0.2s; }
+
+.nav-desktop { display: flex; gap: 36px; align-items: center; }
+.hamburger { display: none; background: none; border: none; color: #f0ede8; font-size: 24px; padding: 4px; }
+.hero-grid { width: 100%; }
+.project-card { width: 100%; }
+
+@media (max-width: 1024px) {
+  body { padding-inline: 20px; }
+}
+
+@media (max-width: 768px) {
+  main { padding-top: 72px; }
+  nav { padding: 14px 20px !important; }
+  .nav-desktop { display: none !important; }
+  .hamburger { display: block !important; }
+  .hero-grid { gap: 32px; }
+  .project-card { grid-template-columns: 1fr !important; }
+  footer { flex-direction: column; align-items: flex-start; }
+  footer button { width: 100%; max-width: 240px; }
+}
+
+@media (max-width: 640px) {
+  body { padding-inline: 16px; }
+  .hero-grid { gap: 24px; }
+  .hero-copy h1 { font-size: clamp(38px, 12vw, 56px); }
+  .project-card { gap: 16px !important; }
+  .section-grid { gap: 24px !important; }
+}
+
+@media (pointer: coarse) {
+  button, a { cursor: pointer !important; }
+}
+
 /* Animations */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }

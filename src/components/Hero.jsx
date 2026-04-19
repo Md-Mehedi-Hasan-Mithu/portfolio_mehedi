@@ -132,9 +132,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="hero-image-card" style={{ opacity: 1, animation: 'fadeUp 0.7s 0.7s ease both' }}>
-            <img src={heroImage} alt="Mehedi Hasan" />
-          </div>
+          
         </div>
       </div>
 
@@ -145,19 +143,8 @@ export default function Hero() {
           gap: 64px;
           align-items: center;
         }
-        .hero-image-card {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-        }
-        .hero-image-card img {
-          width: 100%;
-          max-width: 520px;
-          border-radius: 24px;
-          box-shadow: 0 40px 120px rgba(0,0,0,0.35);
-          object-fit: contain;
-        }
+       
+      
         @media (max-width: 1080px) {
           .hero-grid {
             grid-template-columns: 1fr;
